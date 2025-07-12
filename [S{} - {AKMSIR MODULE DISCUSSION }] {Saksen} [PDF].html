@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AKM Sir Module Discussion Links</title>
+
+  <!-- Font & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f0f0f;
+      color: white;
+      padding: 20px;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    #particles-js {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+    }
+    body.light-theme {
+  background: #f0f0f0;
+  color: #1a1a1a;
+}
+
+body.light-theme .chapter-card {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #000;
+}
+
+body.light-theme .chapter-title::before,
+body.light-theme .chapter-title::after {
+  background: #007c91;
+}
+
+body.light-theme .link-card {
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 124, 145, 0.2);
+}
+
+body.light-theme .link-card a {
+  color: #007c91;
+}
+
+body.light-theme .toggle-theme {
+  background: #ddd;
+  color: #007c91;
+}
+
+body.light-theme .header {
+  background: linear-gradient(-45deg, #b4e0ff, #d0f0ff);
+  color: #007c91;
+}
+
+body.light-theme .chapter-title {
+  color: #007c91;
+}
+
+body.light-theme #scroll-progress {
+  background: linear-gradient(90deg, #007c91, #66d8ef);
+}
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      background: linear-gradient(-45deg, #4b6cb7, #182848);
+      background-size: 400% 400%;
+      animation: gradientMove 10s ease infinite, fadeInSlide 1.2s ease forwards;
+      opacity: 0;
+      transform: translateY(-20px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes fadeInSlide {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    <style>.header {
+  text-align: center;
+  padding: 20px;
+}
+
+.header h1 {
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.subline {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.header img {
+  width: 100px;
+  height: auto;
+  margin-top: 10px;
+}
+
+    .header img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      transition: transform 0.3s ease;
+    }
+
+    .header img:hover {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    .header h1 {
+      font-size: 2rem;
+      color: #66fcf1;
+      text-shadow: 0 0 5px #66fcf1, 0 0 10px #1fefef, 0 0 20px #0ff;
+    }
+
+    .chapter-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 20px;
+      margin: 30px auto;
+      max-width: 900px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+      text-align: center;
+    }
+
+    .chapter-title {
+      font-size: 1.8rem;
+      color: #00fff2;
+      margin-bottom: 25px;
+      position: relative;
+    }
+
+    .chapter-title::before,
+    .chapter-title::after {
+      content: "";
+      display: block;
+      height: 2px;
+      background: #00fff2;
+      margin: 10px auto;
+      width: 60%;
+      opacity: 0.3;
+    }
+
+    .links-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .link-card {
+      background-color: #1d1d1d;
+      padding: 15px 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,255,255,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .link-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 20px rgba(0,255,255,0.5);
+    }
+
+    .link-card a {
+      color: #00fff2;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .link-card input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: #00fff2;
+      cursor: pointer;
+    }
+
+    #loading-spinner {
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: #0f0f0f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 0.4s ease;
+    }
+
+    .spinner {
+      border: 8px solid rgba(0, 255, 255, 0.2);
+      border-top: 8px solid #00fff2;
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .toggle-theme {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #222;
+      color: #00fff2;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      z-index: 10;
+      transition: background 0.3s ease;
+    }
+
+    .toggle-theme:hover {
+      background: #333;
+    }
+    
+    .links-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.link-card {
+  display: flex;
+  align-items: center;
+}
+
+    #scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 4px;
+      width: 0%;
+      background: linear-gradient(90deg, #00fff2, #4b6cb7);
+      z-index: 999;
+      transition: width 0.2s ease;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- Loading Spinner -->
+  <div id="loading-spinner">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Particle Background -->
+  <div id="particles-js"></div>
+
+  <!-- Theme Toggle -->
+  <button class="toggle-theme" onclick="toggleTheme()">🌙 Toggle Theme</button>
+
+<!-- Header -->
+<div class="header">
+  <h1>AJAY KUMAR MISHRA SIR - MODULE DISCUSSION</h1>
+  <p class="subline">
+    Welcome to AKM Sir's Module Discussion Links.<br />
+    This site provides organized access to all module discussion videos for the JSTAR Series.<br />
+    Click on any topic below and select the specific section you need.
+  </p>
+  <img src="https://iili.io/FGqyDNe.th.jpg" alt="AKM Icon" />
+</div>
+  
+  <!-- Search Bar -->
+<div style="text-align: center; margin-bottom: 30px;">
+  <input
+    type="text"
+    id="search-input"
+    placeholder="Search modules or questions..."
+    style="padding: 12px 20px; font-size: 1rem; width: 80%; max-width: 500px; border-radius: 10px; border: none; outline: none; box-shadow: 0 4px 10px rgba(0,255,255,0.3);"
+  />
+</div>
+
+  <!-- Chapters Go Here (kept as-is from your original) -->
+  <!-- ... (Content you pasted will continue from here, unchanged) -->
+<!-- Mole Concept -->
+<div class="chapter-card" data-aos="fade-up">
+  <div class="chapter-title">Mole Concept</div>
+  <div class="links-container">
+    <div class="link-card" data-id="mole-1">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://unacademy.app.link/8TKTVArmhzb" target="_blank">From Q1 to Q15</a>
+    </div>
+    <div class="link-card" data-id="mole-2">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://unacademy.com/class/module-discussion-i/MF8WKVAX" target="_blank">From Q16 to Q41</a>
+    </div>
+    <div class="link-card" data-id="mole-3">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://unacademy.com/class/module-discussion-ii/HXBCEN9Z" target="_blank">From Q42 to Q61</a>
+    </div>
+    <div class="link-card" data-id="mole-4">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://unacademy.com/class/module-discussion/L3Z4HZ5B" target="_blank">From Q62 to Q71</a>
+    </div>
+    <div class="link-card" data-id="mole-5">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://unacademy.com/class/doubt-clearing-session/NHZHH8K4" target="_blank">From Q72 to Q90</a>
+    </div>
+    <div class="link-card" data-id="mole-6">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://unacademy.com/class/module-discussion-mole-concept-i/R0EWGXHR" target="_blank">From Q91 to Q103</a>
+    </div>
+    <div class="link-card" data-id="mole-7">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://unacademy.com/class/module-discussion-mole-concept-ii/4N9RRY5O" target="_blank">From Q104 to Q118</a>
+    </div>
+    <div class="link-card" data-id="mole-8">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://unacademy.com/class/doubt-clearing-session/N18LZG5K" target="_blank">From Q119 to Last</a>
+    </div>
+  </div>
+</div>
+
+<!-- Atomic Structure -->
+<div class="chapter-card" data-aos="fade-up">
+  <div class="chapter-title">Atomic Structure</div>
+  <div class="links-container">
+    <div class="link-card" data-id="atomic-1">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://unacademy.com/class/doubt-clearing-session/9O6OUBHK" target="_blank">From Q1 to Q11</a>
+    </div>
+    <div class="link-card" data-id="atomic-2">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://unacademy.com/class/module-discussion-mole-concept/B34X537A" target="_blank">From Q12 to Q30</a>
+    </div>
+    <div class="link-card" data-id="atomic-3">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://unacademy.com/course/module-discussion-jstar-series-2023/ASBJBNVP" target="_blank">From Q31 to Q85</a>
+    </div>
+    <div class="link-card" data-id="atomic-4">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://unacademy.com/course/module-discussion-jstar-series-atomic-structure/K748UA4B" target="_blank">From Q86 to Q180</a>
+    </div>
+    <div class="link-card" data-id="atomic-5">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://unacademy.com/course/module-discussion-jstar-series-atomic-structure/K748UA4B" target="_blank">Part 1</a>
+    </div>
+    <div class="link-card" data-id="atomic-6">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://unacademy.com/course/module-discussion-jstar-series-2023/ASBJBNVP" target="_blank">Part 2</a>
+    </div>
+    <div class="link-card" data-id="atomic-7">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://unacademy.app.link/Ivu0D0k0grb" target="_blank">Part 3</a>
+    </div>
+  </div>
+</div>
+
+<!-- Chemical Equilibrium -->
+<div class="chapter-card" data-aos="fade-up">
+  <div class="chapter-title">Chemical Equilibrium</div>
+  <div class="links-container">
+    <div class="link-card" data-id="equil-1">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://unacademy.com/class/module-discussion-iii/B8FOZN2Z" target="_blank">From Q1 to Q29</a>
+    </div>
+    <div class="link-card" data-id="equil-2">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://unacademy.com/course/module-discussion-jstar-series/ITRNUJI3" target="_blank">From Q30 to Last</a>
+    </div>
+  </div>
+</div>
+
+<!-- Thermodynamics -->
+<div class="chapter-card" data-aos="fade-up">
+  <div class="chapter-title">Thermodynamics</div>
+  <div class="links-container">
+    <div class="link-card" data-id="thermo-1">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://unacademy.com/class/module-discussion-part-iiii/N4Q060PD" target="_blank">From Q1 to Q25</a>
+    </div>
+    <div class="link-card" data-id="thermo-2">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://unacademy.com/course/course-on-module-discussion-jstar-series-thermodynamics/0H1L15TI" target="_blank">From Q26 to Q158</a>
+    </div>
+    <div class="link-card" data-id="thermo-3">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://unacademy.com/course/course-on-module-discussion-jstar-series-thermodynamics/0H1L15TI" target="_blank">From Q159 to Last</a>
+    </div>
+    <div class="link-card" data-id="thermo-4">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://unacademy.com/course/course-on-module-discussion-jstar-series-solution-and-thermodynamics/PF9AQD9R" target="_blank">Part 1</a>
+    </div>
+    <div class="link-card" data-id="thermo-5">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://unacademy.com/course/course-on-module-discussion-jstar-series-thermodynamics-and-electrochemistry/YL579OPT" target="_blank">Part 2</a>
+    </div>
+    <div class="link-card" data-id="thermo-6">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://unacademy.com/course/course-on-module-discussion-jstar-series-thermodynamics/0H1L15TI" target="_blank">Part 3</a>
+    </div>
+  </div>
+</div>
+
+<!-- Ionic Equilibrium -->
+<div class="chapter-card" data-aos="fade-up">
+  <div class="chapter-title">Ionic Equilibrium</div>
+  <div class="links-container">
+    <div class="link-card" data-id="ionic-1">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://unacademy.com/course/course-on-module-discussion-jstar-series-ionic-equilibrium/6M45BE7C" target="_blank">Open</a>
+    </div>
+  </div>
+</div>
+
+<!-- Redox Reactions -->
+<div class="chapter-card" data-aos="fade-up">
+  <div class="chapter-title">Redox Reactions</div>
+  <div class="links-container">
+    <div class="link-card" data-id="redox-1">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://telegram.me/saksen_journey_offical" target="_blank">Not Yet Discussed</a>
+    </div>
+  </div>
+</div>
+
+<!-- Solutions -->
+<div class="chapter-card" data-aos="fade-up">
+  <div class="chapter-title">Solutions</div>
+  <div class="links-container">
+    <div class="link-card" data-id="sol-1">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://unacademy.com/course/course-on-module-discussion-jstar-series-2022/TTZTV36O" target="_blank">From Q1 to Q76</a>
+    </div>
+    <div class="link-card" data-id="sol-2">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://unacademy.com/course/course-on-module-discussion-jstar-series-solution/R8ZBJVKP" target="_blank">From Q77 to Last</a>
+    </div>
+    <div class="link-card" data-id="sol-3">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://unacademy.com/class/module-discussion-part-i/7RNIFBZ3" target="_blank">PYQs</a>
+    </div>
+    <div class="link-card" data-id="sol-4">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://unacademy.com/class/module-discussion-part-i/7RNIFBZ3" target="_blank">Ques Last Lecture</a>
+    </div>
+  </div>
+</div>
+
+<!-- Electrochemistry -->
+<div class="chapter-card" data-aos="fade-up">
+  <div class="chapter-title">Electrochemistry</div>
+  <div class="links-container">
+    <div class="link-card" data-id="electro-1">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://unacademy.com/class/module-discussion-part-iv/6L0FDZES" target="_blank">Q1 to Q4 (01:13:13)</a>
+    </div>
+    <div class="link-card" data-id="electro-2">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://unacademy.com/class/module-discussion-part-v/2AME24U3" target="_blank">Q5 to Q23</a>
+    </div>
+    <div class="link-card" data-id="electro-3">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://unacademy.com/class/module-discussion-part-vi/29AR28YQ" target="_blank">Q24 to Q43</a>
+    </div>
+    <div class="link-card" data-id="electro-4">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://unacademy.com/class/ionic-equilibrium-part-iv/RJPMGN5U" target="_blank">Q44 to Q59</a>
+    </div>
+    <div class="link-card" data-id="electro-5">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://unacademy.com/class/ionic-equilibrium-part-i/LEM21UEJ" target="_blank">Q60 to Q70</a>
+    </div>
+    <div class="link-card" data-id="electro-6">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://unacademy.com/class/ionic-equilibrium-part-ii/0FGRJ31L" target="_blank">Q71 to Q84</a>
+    </div>
+    <div class="link-card" data-id="electro-7">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://unacademy.com/class/doubt-clearing-session/FG4MD60A" target="_blank">Q85 to Q102</a>
+    </div>
+    <div class="link-card" data-id="electro-8">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://unacademy.com/course/course-on-module-discussion-jstar-series-ionic-equilibrium/ZT34ZWGT" target="_blank">Q103 to Q120 (Last Lecture 31st May)</a>
+    </div>
+  </div>
+</div>
+
+<!-- Chemical Kinetics -->
+<div class="chapter-card" data-aos="fade-up">
+  <div class="chapter-title">Chemical Kinetics</div>
+  <div class="links-container">
+    <div class="link-card" data-id="kinetics-1">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://unacademy.com/class/module-discussion-chemical-kinetics-i/POQWVIQP" target="_blank">Q1 to Q19</a>
+    </div>
+    <div class="link-card" data-id="kinetics-2">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://unacademy.com/class/doubt-clearing-session/UKR5O2T9" target="_blank">Q20 to Q45</a>
+    </div>
+    <div class="link-card" data-id="kinetics-3">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://unacademy.com/class/module-discussion-chemical-kinetics-ii/BOMWCSDX" target="_blank">Q46 to Q68</a>
+    </div>
+    <div class="link-card" data-id="kinetics-4">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://unacademy.com/class/module-discussion-solution/W6FOWOZD" target="_blank">Q69 to Last</a>
+    </div>
+    <div class="link-card" data-id="kinetics-5">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://t.me/saksen_journey_offical" target="_blank">OUR MAIN CHANNEL</a>
+    </div>
+  </div>
+</div>
+
+<!-- JOIN US -->
+<div class="chapter-card" data-aos="fade-up">
+  <div class="chapter-title">JOIN US</div>
+  <div class="links-container">
+    <div class="link-card" data-id="join-1">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://telegram.me/saksen_journey_offical" target="_blank">MAIN CHANNEL</a>
+    </div>
+    <div class="link-card" data-id="join-2">
+      <input type="checkbox" class="progress-check" />
+      <a href="https://telegram.me/saksen_main_bot" target="_blank">OUR BOT</a>
+    </div>
+  </div>
+</div>
+<script>
+  const searchInput = document.getElementById('search-input');
+  
+  searchInput.addEventListener('input', () => {
+    const query = searchInput.value.toLowerCase().trim();
+    const cards = document.querySelectorAll('.chapter-card');
+    
+    cards.forEach((card) => {
+      const title = card.querySelector('.chapter-title').textContent.toLowerCase();
+      const links = card.querySelectorAll('.link-card');
+      let showCard = false;
+      
+      links.forEach((linkCard) => {
+        const text = linkCard.textContent.toLowerCase();
+        const match = title.includes(query) || text.includes(query);
+        linkCard.style.display = match ? 'flex' : 'none';
+        if (match) showCard = true;
+      });
+      
+      card.style.display = showCard ? 'block' : 'none';
+    });
+  });
+</script>
+  <!-- Scripts -->
+  <script>
+    window.addEventListener('load', () => {
+      const spinner = document.getElementById('loading-spinner');
+      spinner.style.opacity = '0';
+      setTimeout(() => {
+        spinner.style.display = 'none';
+      }, 400);
+    });
+
+    // Scroll progress bar
+    window.addEventListener('scroll', () => {
+      const scrollProgress = document.getElementById('scroll-progress');
+      const scrollTop = document.documentElement.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrollPercent = (scrollTop / scrollHeight) * 100;
+      scrollProgress.style.width = scrollPercent + '%';
+    });
+
+    // Dummy theme toggle (you can expand it later)
+    function toggleTheme() {
+      alert("Theme toggle functionality not implemented yet.");
+    }
+  </script>
+
+  <!-- AOS Init -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  <!-- AOS & Particles.js Init -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    
+    function toggleTheme() {
+      document.body.classList.toggle('light-theme');
+    }
+  </script>
+  <<script>
+    particlesJS("particles-js", {
+    "particles": {
+    "number": {
+    "value": 80,
+    "density": { "enable": true, "value_area": 800 }
+    },
+    "color": { "value": "#00fff2" },
+    "shape": {
+    "type": ["circle", "triangle", "edge"],
+    "stroke": { "width": 0, "color": "#000000" }
+    },
+    "opacity": {
+    "value": 0.2,
+    "random": true
+    },
+    "size": {
+    "value": 6,
+    "random": true
+    },
+    "line_linked": {
+    "enable": true,
+    "distance": 120,
+    "color": "#00fff2",
+    "opacity": 0.15,
+    "width": 1
+    },
+    "move": {
+    "enable": true,
+    "speed": 1.8,
+    "direction": "none",
+    "random": true,
+    "straight": false,
+    "out_mode": "bounce"
+    }
+    },
+    "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+    "onhover": {
+    "enable": true,
+    "mode": ["grab", "bubble"]
+    },
+    "onclick": {
+    "enable": true,
+    "mode": "repulse"
+    },
+    "resize": true
+    },
+    "modes": {
+    "grab": {
+    "distance": 140,
+    "line_linked": {
+    "opacity": 0.25
+    }
+    },
+    "bubble": {
+    "distance": 200,
+    "size": 8,
+    "duration": 2,
+    "opacity": 0.3,
+    "speed": 2
+    },
+    "repulse": {
+    "distance": 150,
+    "duration": 0.4
+    }
+    }
+    },
+    "retina_detect": true
+    });
+    </script>
+  </script>
+</body>
+</html>
